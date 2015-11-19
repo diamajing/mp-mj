@@ -1,0 +1,73 @@
+<extend name="Public:newbase" />
+<block name="main">
+	<css file="/Theme/Marrys/Css/demo.css" />
+		<div class="banner">
+			<div class="bluemp_block_banner banner_img" id="banner"></div>
+		</div>
+		<div class="bluemp_block_main_nav" id="nav"></div>
+	<script>
+		(function() {
+			var d, e, f = 1,
+					g = document.documentElement.clientWidth,
+					h = document.documentElement.clientHeight;
+			f = g / 320, e = (h / f - 486) / 2;
+			if (
+					$("[name='viewport']").attr("content", "width=320, initial-scale=" + f + ", maximum-scale=" + f + ", user-scalable=no"),
+					320 != document.documentElement.clientWidth && isWeiXin() &&
+					(
+							navigator.userAgent.indexOf("Android") > -1 || navigator.userAgent.indexOf("Linux") > -1
+					)
+			) {
+				var i = 320 / g,
+						j = 486 / h,
+						k = Math.max(i, j);
+				k = k > 1 ? k : 160 * k,
+						k = parseInt(k),
+						$("[name='viewport']").attr("content", "width=320, target-densitydpi=" + k)
+			}
+		})();
+		new bluemp.block.banner({
+			container:"#banner",
+			isDefault:false,
+			fnSuccess:function(data){
+				console.log(data+"/"+!data.carouselpic[0].pic);
+				if(!data.carouselpic[0].pic){
+					$(".banner_img").html("<img src='/Theme/Marrys/Images/banner.png'>");
+				}else{
+					new bluemp.block.banner();
+				}
+			}
+		});
+		new bluemp.block.mainNav({
+			container: "#nav",
+			isDefault: false,
+			fnSuccess: function (data) {
+				//console.log(JSON.stringify(data));
+				if (data) {
+					console.log(data);
+					var html = "";
+					html += '<div class="section_div"><div class="section_con">';
+					for (i = 0; data != null && i < data.length && data.length != 0; i++) {
+						var icon;
+						if (data[i].pic && data[i].pic != "") {
+							icon = data[i].pic;
+						} else {
+							icon = "/Theme/Marrys/Images/hand" + (i) + ".png";
+						}
+						html += '<a href="' + data[i].url + '"><div class="section_box"><div class="section_box2"><img src=' + icon + '></div><div class="all_zi">' + data[i].name + '</div></div></a>';
+					}
+					html += '</div></div>';
+					$("#nav").append(html);
+				}
+
+			}
+		});
+	</script>
+	<script>
+		var WeixinTLImg = MsgImg = bluemp_logo,
+				WeixinUrl = "",
+				WeinxinTitle = bluemp_title,
+				WeixinDesc = bluemp_title;
+	</script>
+</block>
+<block name="footer"></block>

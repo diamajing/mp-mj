@@ -1,0 +1,109 @@
+* {
+	font-family: "Î¢ÈíÑÅºÚ",Helvetica,Arial,Verdana,sans-serif;
+	font-feature-settings: inherit;
+	font-kerning: inherit;
+	font-language-override: inherit;
+	font-size: inherit;
+	font-size-adjust: inherit;
+	font-stretch: inherit;
+	font-style: inherit;
+	font-synthesis: inherit;
+	font-variant: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+}
+body {
+	line-height: 1;
+	background: #fcfcfc;
+	margin: 0 auto;
+	width: 100%;
+}
+
+ul, li  {
+	list-style: none;
+}
+a, span, li {
+}
+a {
+	list-style: outside none none;
+	text-decoration: none;
+}
+a:link {
+}
+.banner{
+	width: 100%;
+	float: left;
+}
+.banner_img{
+	width: 100%;
+	height: 100px;
+	max-height: 100px;
+	overflow: hidden;
+}
+.banner_img img{
+	width: 100%;
+	height: 100%;
+}
+.section {
+	background:pink none repeat scroll 0 0;
+	float: left;
+	padding-bottom: 10%;
+	width: 100%;
+}
+.section_div {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.section_con{
+	background-color: pink;
+	min-height: 480px;
+	width: 100%;
+	float: left;
+	padding-top: 4%;
+	padding-bottom: 10%;
+}
+.section_box{
+	width: 50%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+.section_box2{
+	border: 3px solid white;
+	margin: 30% auto 5%;
+	width: 70%;
+	padding: 21% 0;
+	transform: rotate(-10deg);
+	-o-transform: rotate(-6deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-6deg);
+	box-shadow: -2px 2px 30px grey;
+	overflow: hidden;
+}
+.section_box img{
+	float: left;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.all_zi{
+	font-size:0.8rem;
+	position: absolute;
+	z-index: 10;
+	color: black;
+	width: 100%;
+	background-color: pink;
+	padding-top: 5%;
+	padding-bottom: 9%;
+	bottom: -20%;
+	left: 0;
+}
+.all_all{
+	padding-top: 1%;
+	width: 70%;
+}
