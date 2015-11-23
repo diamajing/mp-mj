@@ -1,5 +1,5 @@
 * {
-	font-family: "΢���ź�",Helvetica,Arial,Verdana,sans-serif;
+	font-family: "Î¢ÈíÑÅºÚ",Helvetica,Arial,Verdana,sans-serif;
 	font-feature-settings: inherit;
 	font-kerning: inherit;
 	font-language-override: inherit;
@@ -106,4 +106,13 @@ a:link {
 .all_all{
 	padding-top: 1%;
 	width: 70%;
+}
+.bluemp_block_banner_wapper .bd li img{
+	height: 135px;
+}
+.bluemp_block_banner{
+	height: 135px!important;
+}
+#banner img{
+	height:135px;
 }
